@@ -1,0 +1,19 @@
+{
+  "name": "traefik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:ms1": "npm --prefix=./packages/ms1 start",
+    "start:ms2": "npm --prefix=./packages/ms2 start",
+    "build:ms1": "npm --prefix=./packages/ms1 run build",
+    "build:ms2": "npm --prefix=./packages/ms2 run build",
+    "start": "concurrently --kill-others 'npm run start:ms1' 'npm run start:ms2'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
